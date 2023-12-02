@@ -1,0 +1,19 @@
+//Burger Colors
+$burgerColor: #222;
+$burgerActiveColor: #222;
+
+$breakpoints: (
+	'xs': 400px,
+	'sm': 544px,
+	'md': 768px,
+	'lg': 992px,
+	'xl': 1280px,
+	'xxl': 1440px,
+);
+
+// z-index
+$burgerIndex: 4;
+$mobileMenuIndex: 3;
+$overlayIndex: 2;
+
+// Colors
