@@ -1,0 +1,93 @@
+.determine {
+	padding-top: 114px;
+	@media screen and (max-width: 768px) {
+		padding-top: 90px;
+	}
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 20px;
+		@media screen and (max-width: 992px) {
+			flex-direction: column;
+		}
+	}
+
+	&__content {
+		position: relative;
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: -112px;
+			right: 2px;
+
+			background-image: url('../img/arrow.png');
+			background-position: center center;
+			background-size: cover;
+			background-repeat: no-repeat;
+
+			width: 127px;
+			height: 96px;
+		}
+		max-width: 490px;
+		@media screen and (max-width: 992px) {
+			max-width: 100%;
+			padding-right: 46px;
+			&::after {
+				width: 66px;
+				height: 55px;
+				bottom: -10px;
+				background-image: url('../img/arrow-bot.png');
+			}
+		}
+		@media screen and (max-width: 500px) {
+			padding-right: 30px;
+			&::after {
+				right: -15px;
+				bottom: -20px;
+			}
+		}
+		width: 100%;
+		display: flex;
+		align-items: center;
+		gap: 20px;
+	}
+
+	&__title {
+		color: var(--black);
+		font-family: Oswald;
+		font-size: 40px;
+		font-weight: 400;
+		line-height: 125%;
+		@media screen and (max-width: 1100px) {
+			font-size: 35px;
+		}
+		@media screen and (max-width: 768px) {
+			font-size: 32px;
+		}
+		@media screen and (max-width: 500px) {
+			font-size: 20px;
+		}
+		span {
+			font-weight: 600;
+		}
+	}
+
+	&__video {
+		max-width: 624px;
+		@media screen and (max-width: 992px) {
+			max-width: 100%;
+		}
+		width: 100%;
+		border-radius: 5px;
+
+		overflow: hidden;
+		height: 353px;
+
+		img {
+			width: 100%;
+			object-fit: cover;
+			height: 100%;
+		}
+	}
+}

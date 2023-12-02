@@ -1,5 +1,14 @@
 .choose {
 	padding-top: 120px;
+	background: linear-gradient(
+			180deg,
+			#fff 0%,
+			#fff 8.01%,
+			rgba(255, 255, 255, 0.96) 15.49%,
+			rgba(255, 255, 255, 0.92) 19.66%,
+			rgba(255, 255, 255, 0) 100%
+		),
+		#faf3e8;
 	@media screen and (max-width: 768px) {
 		padding-top: 50px;
 	}
@@ -57,6 +66,11 @@
 	}
 
 	&__num {
+		color: var(--white);
+		font-family: Oswald;
+		font-size: 36px;
+		font-weight: 600;
+		line-height: 138%;
 	}
 
 	&__body {
@@ -84,5 +98,82 @@
 		@media screen and (max-width: 500px) {
 			font-size: 14px;
 		}
+	}
+}
+
+// Appraisal
+
+.appraisal {
+	padding-top: 48px;
+	transform: translateY(40px);
+
+	&__container {
+		padding: 50px 15px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		border-radius: 5px;
+		background:
+			linear-gradient(
+				0deg,
+				rgba(250, 243, 232, 0.5) 0%,
+				rgba(250, 243, 232, 0.5) 100%
+			),
+			url('../img/appraisal-bg.png'),
+			lightgray 0px -141.5px / 126.316% 199.262% no-repeat;
+	}
+
+	&__divider {
+		margin-bottom: 18px;
+	}
+	&__flower {
+		margin-bottom: 10px;
+	}
+
+	&__subtitle {
+		max-width: 630px;
+		margin: 0 auto;
+		margin-bottom: 20px;
+		color: var(--black);
+		text-align: center;
+		font-family: Oswald;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 144%;
+	}
+
+	&__socials {
+		.socials__link {
+			width: 54px;
+			height: 54px;
+		}
+		.socials__icon {
+			width: 30px;
+			height: 30px;
+		}
+	}
+}
+
+.decor-divider {
+	max-width: 620px;
+	width: 100%;
+	height: 30px;
+}
+.appraisal-menu {
+	margin-bottom: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	list-style: decimal;
+	max-width: 510px;
+	width: 100%;
+	&__item {
+		color: var(--black);
+		font-family: Oswald;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 166%;
 	}
 }
