@@ -68,7 +68,7 @@
 
 		@media screen and (max-width: 1100px) {
 			flex-direction: column;
-			gap: 20px;
+			gap: 30px;
 		}
 	}
 
@@ -92,6 +92,7 @@
 		margin-right: 30px;
 		@media screen and (max-width: 1100px) {
 			margin-right: 0;
+			gap: 20px;
 		}
 	}
 
@@ -100,7 +101,7 @@
 		@media screen and (max-width: 1100px) {
 			margin-right: 0;
 			flex-direction: column;
-			gap: 20px;
+			gap: 30px;
 		}
 	}
 
