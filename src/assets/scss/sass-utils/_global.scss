@@ -81,3 +81,28 @@ body {
 	background-color: transparent;
 	cursor: pointer;
 }
+
+.input-reset {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	background-color: transparent;
+	border: none;
+	font: inherit;
+}
+
+.btn {
+	color: #fff;
+	text-align: center;
+	font-family: Oswald;
+	font-size: 16px;
+	font-weight: 600;
+
+	padding: 11px 20px;
+	border-radius: 5px;
+	background: #b78b49;
+
+	@media screen and (max-width: 375px) {
+		font-size: 14px;
+	}
+}
