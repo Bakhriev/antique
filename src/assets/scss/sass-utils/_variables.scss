@@ -1,6 +1,9 @@
-//Burger Colors
-$burgerColor: #222;
-$burgerActiveColor: #222;
+:root {
+	--burger-default: #8c755e;
+	--burger-active: #8c755e;
+	--black: #000;
+	--driftwood: #b78b49;
+}
 
 $breakpoints: (
 	'xs': 400px,

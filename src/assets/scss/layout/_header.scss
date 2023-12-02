@@ -1,24 +1,10 @@
-.header {
-	padding: 20px 0;
-
-	// .header__container
-
-	&__container {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-
-		gap: 20px;
-	}
-}
-
 .mobile-menu {
 	&.active {
 		transform: translateX(0);
 	}
 
 	// Mobile Menu Styles
-	@include breakpoint(md) {
+	@media screen and (max-width: 1100px) {
 		display: flex;
 		flex-direction: column;
 
@@ -45,18 +31,129 @@
 	}
 }
 
-.menu {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+.logo {
+	display: block;
+	flex-shrink: 0;
+}
 
+.header {
+	position: absolute;
+	width: 100%;
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		@media screen and (max-width: 1100px) {
+			align-items: center;
+		}
+	}
+
+	&__inner {
+		padding: 20px 0;
+		display: flex;
+		align-items: center;
+
+		@media screen and (max-width: 1100px) {
+			flex-direction: column;
+			gap: 20px;
+		}
+	}
+
+	&__logo {
+		width: 139px;
+		height: 141px;
+		@media screen and (max-width: 1100px) {
+			width: 80px;
+			height: 80px;
+		}
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__socials {
+		margin-right: 30px;
+		@media screen and (max-width: 1100px) {
+			margin-right: 0;
+		}
+	}
+
+	&__menu {
+		margin-right: 40px;
+		@media screen and (max-width: 1100px) {
+			margin-right: 0;
+			flex-direction: column;
+			gap: 20px;
+		}
+	}
+
+	&__icon {
+		margin-right: 5px;
+		width: 14px;
+		height: 14px;
+		flex-shrink: 0;
+	}
+
+	&__number {
+		font-weight: 600;
+		font-size: 16px;
+		& ~ span {
+			text-decoration: underline;
+		}
+	}
+
+	&__btn {
+		padding: 10px 20px;
+		color: var(--black);
+		text-align: center;
+		font-family: Oswald;
+		font-size: 16px;
+		font-weight: 600;
+		border-radius: 5px;
+		border: 1px solid var(--black);
+	}
+}
+
+.header-menu {
 	display: flex;
 	align-items: center;
-	flex-wrap: wrap;
+	gap: 50px;
 
-	gap: 20px 20px;
-
+	&__item {
+		display: flex;
+	}
 	&__link {
 		text-decoration: none;
+
+		display: flex;
+		flex-direction: column;
+
+		color: var(--black);
+		text-align: right;
+		font-family: Oswald;
+		font-size: 14px;
+		font-weight: 400;
+	}
+}
+
+.socials {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px 10px;
+	&__link {
+		display: grid;
+		place-items: center;
+		padding: 8px;
+		width: 36px;
+		height: 36px;
+		background-color: var(--driftwood);
+
+		border-radius: 50%;
+	}
+
+	&__icon {
+		width: 20px;
+		height: 20px;
 	}
 }

@@ -19,7 +19,7 @@ body {
 .container {
 	margin: 0 auto;
 
-	max-width: 1430px;
+	max-width: 1170px;
 	padding: 0 15px;
 }
 
@@ -69,7 +69,15 @@ body {
 	border: 0 !important;
 }
 
-.logo {
-	display: block;
-	flex-shrink: 0;
+.list-reset {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.btn-reset {
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
 }

@@ -2,24 +2,72 @@
 	<div class="header__container container">
 		<!--  -->
 
-		<a href="#" class="logo"><img src="" alt="logo" /></a>
+		<a href="#" class="logo header__logo"
+			><img width="139" height="141" src="./assets/img/logo.svg" alt="logo"
+		/></a>
 
 		<!--  -->
 		<div class="mobile-menu">
-			<nav>
-				<ul class="menu">
+			<div class="header__inner">
+				<nav>
+					<ul class="header-menu header__menu list-reset">
+						<li class="header-menu__item">
+							<svg class="header__icon">
+								<use href="./assets/img/svg/sprite.svg#pin"></use>
+							</svg>
+							<a href="#" class="header-menu__link border-bottom-line">
+								<span>г. Москва, Пресненская наб,</span>
+								<span>д. 10,стр. 1, офис 100</span>
+							</a>
+						</li>
+						<li class="header-menu__item">
+							<svg class="header__icon">
+								<use href="./assets/img/svg/sprite.svg#pin"></use>
+							</svg>
+							<a href="#" class="header-menu__link border-bottom-line">
+								<span>пн-пт с 10.00 до 21.00</span>
+								<span>сб-вс с 10.00 до 20.00</span>
+							</a>
+						</li>
+						<li class="header-menu__item">
+							<svg class="header__icon">
+								<use href="./assets/img/svg/sprite.svg#telephone"></use>
+							</svg>
+							<a
+								href="tel:+79932561231"
+								class="header-menu__link border-bottom-line"
+							>
+								<span class="header__number">+7 993 256-12-31</span>
+								<span>Заказать звонок</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<ul class="socials header__socials list-reset">
 					<li>
-						<a href="#" class="menu__link border-bottom-line">Home</a>
+						<a href="#" class="socials__link" aria-label="vkontakte">
+							<svg class="socials__icon">
+								<use href="./assets/img/svg/sprite.svg#vk"></use>
+							</svg>
+						</a>
 					</li>
-					<li>@include('../components/dropdown.html')</li>
 					<li>
-						<a href="#" class="menu__link border-bottom-line">About</a>
+						<a href="#" class="socials__link" aria-label="telegram">
+							<svg class="socials__icon">
+								<use href="./assets/img/svg/sprite.svg#telegram"></use>
+							</svg>
+						</a>
 					</li>
 					<li>
-						<a href="#" class="menu__link border-bottom-line">Contact</a>
+						<a href="#" class="socials__link" aria-label="whatsapp">
+							<svg class="socials__icon">
+								<use href="./assets/img/svg/sprite.svg#whatsapp"></use>
+							</svg>
+						</a>
 					</li>
 				</ul>
-			</nav>
+				<button class="header__btn btn-reset">Задать вопрос</button>
+			</div>
 		</div>
 
 		<!--  -->
