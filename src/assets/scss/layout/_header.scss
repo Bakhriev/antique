@@ -163,12 +163,15 @@
 	&__link {
 		display: grid;
 		place-items: center;
-		padding: 8px;
 		width: 36px;
 		height: 36px;
 		background-color: var(--driftwood);
 
 		border-radius: 50%;
+		@media screen and (max-width: 500px) {
+			width: 30px;
+			height: 30px;
+		}
 
 		&--secondary {
 			background-color: var(--driftwood-200);
@@ -178,5 +181,9 @@
 	&__icon {
 		width: 20px;
 		height: 20px;
+		@media screen and (max-width: 500px) {
+			width: 16px;
+			height: 16px;
+		}
 	}
 }
