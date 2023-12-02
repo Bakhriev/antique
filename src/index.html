@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<title>title</title>
+		<title>Скупка антиквариата в Москве</title>
 	</head>
 
 	<body>
@@ -12,7 +12,10 @@
 
 		<div class="wrapper">
 			@include('assets/layout/sections/header.html')
-			<main class="main">@include('assets/layout/sections/hero.html')</main>
+			<main class="main">
+				@include('assets/layout/sections/hero.html')
+				@include('assets/layout/sections/buy.html')
+			</main>
 
 			@include('assets/layout/sections/footer.html')
 		</div>

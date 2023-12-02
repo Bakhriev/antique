@@ -1,7 +1,9 @@
 .hero {
-	padding: 156px 0;
+	padding-top: 155px;
+	padding-bottom: 80px;
 	@media screen and (max-width: 768px) {
-		padding-top: 100px;
+		padding-top: 80px;
+		padding-bottom: 30px;
 	}
 
 	background-image: url('../img/hero-bg.png');

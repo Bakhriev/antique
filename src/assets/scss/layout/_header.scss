@@ -169,6 +169,10 @@
 		background-color: var(--driftwood);
 
 		border-radius: 50%;
+
+		&--secondary {
+			background-color: var(--driftwood-200);
+		}
 	}
 
 	&__icon {
