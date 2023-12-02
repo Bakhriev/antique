@@ -1,0 +1,132 @@
+.grade {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	@media screen and (max-width: 768px) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	background: linear-gradient(
+			180deg,
+			#fff 0%,
+			#fff 8.01%,
+			rgba(255, 255, 255, 0.96) 15.49%,
+			rgba(255, 255, 255, 0.92) 19.66%,
+			rgba(255, 255, 255, 0) 100%
+		),
+		#faf3e8;
+	&__flowers {
+		margin-bottom: 45px;
+	}
+
+	&__blocks {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 30px;
+	}
+}
+
+// how-determine
+
+.how-determine {
+	padding-top: 80px;
+	@media screen and (max-width: 768px) {
+		padding-top: 50px;
+	}
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		gap: 20px;
+		@media screen and (max-width: 992px) {
+			flex-direction: column;
+		}
+	}
+
+	&__content {
+		max-width: 600px;
+		width: 100%;
+		@media screen and (max-width: 992px) {
+			max-width: 100%;
+			.decor-divider {
+				width: 100%;
+				max-width: 100%;
+			}
+		}
+		@media screen and (max-width: 500px) {
+			.decor-divider {
+				height: 15px;
+			}
+		}
+	}
+
+	&__title {
+		color: var(--black);
+		font-family: Oswald;
+		font-size: 40px;
+		font-weight: 400;
+		line-height: 125%;
+		@media screen and (max-width: 768px) {
+			font-size: 32px;
+		}
+		@media screen and (max-width: 500px) {
+			font-size: 20px;
+			line-height: normal;
+		}
+		span {
+			font-weight: 600;
+		}
+	}
+
+	&__wrap {
+		margin-bottom: 20px;
+		display: flex;
+		align-items: center;
+		gap: 20px;
+	}
+
+	&__subtitle {
+		margin-bottom: 20px;
+		@media screen and (max-width: 500px) {
+			margin-bottom: 10px;
+		}
+		color: var(--black);
+		font-family: Oswald;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 144%;
+	}
+
+	&__form {
+		max-width: 460px;
+		@media screen and (max-width: 992px) {
+			margin: 0 auto;
+			max-width: 600px;
+		}
+		@media screen and (max-width: 500px) {
+			padding: 15px;
+		}
+		width: 100%;
+		padding: 40px;
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+	}
+
+	&__fields {
+		display: flex;
+		gap: 25px;
+		@media screen and (max-width: 500px) {
+			flex-direction: column;
+		}
+	}
+}
+
+.basic-field {
+	&__label {
+	}
+
+	&__input {
+	}
+
+	&__textarea {
+	}
+}
