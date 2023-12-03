@@ -130,3 +130,39 @@
 	&__textarea {
 	}
 }
+
+.custom-file {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	&__label {
+		cursor: pointer;
+
+		display: grid;
+		place-items: center;
+
+		width: 36px;
+		height: 36px;
+		border-radius: 50%;
+		background-color: #f5f5f5;
+		flex-shrink: 0;
+	}
+
+	&__icon {
+		width: 14px;
+		height: 14px;
+	}
+
+	&__name {
+		color: #777575;
+		font-family: Oswald;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: normal;
+		@include text-shorten(1);
+	}
+
+	&__input {
+		display: none;
+	}
+}

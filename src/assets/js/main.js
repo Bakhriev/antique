@@ -53,7 +53,16 @@ tableItems.forEach(item => {
 	})
 })
 
-// Start
+const fileInput = document.querySelector('.custom-file__input')
+const fileInputRes = document.querySelector('.custom-file__name')
+
+fileInput.addEventListener('input', e => {
+	fileInputRes.textContent = e.target.files[0].name
+})
+
+//
+
+// Coins Anim
 const svg = `
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="coin">
     <rect width="24" height="24" fill="none"></rect>
@@ -112,6 +121,125 @@ const svg = `
   </svg>
 `
 
+const svg1 = `
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="coin">
+    <rect width="24" height="24" fill="none"></rect>
+    <ellipse
+      cx="128"
+      cy="104"
+      fill="none"
+      stroke="#BE3144"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="12"
+      rx="104"
+      ry="48"
+    ></ellipse>
+    <line
+      x1="128"
+      x2="128"
+      y1="152"
+      y2="200"
+      fill="none"
+      stroke="#BE3144"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="12"
+    ></line>
+    <path
+      fill="none"
+      stroke="#BE3144"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="12"
+      d="M24,104v48c0,24,40,48,104,48s104-24,104-48V104"
+    ></path>
+    <line
+      x1="192"
+      x2="192"
+      y1="142.107"
+      y2="190.107"
+      fill="none"
+      stroke="#BE3144"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="12"
+    ></line>
+    <line
+      x1="64"
+      x2="64"
+      y1="142.107"
+      y2="190.107"
+      fill="none"
+      stroke="#BE3144"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="12"
+    ></line>
+  </svg>
+`
+const svg2 = `
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="coin">
+    <rect width="24" height="24" fill="none"></rect>
+    <ellipse
+      cx="128"
+      cy="104"
+      fill="none"
+      stroke="#7ED7C1"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="12"
+      rx="104"
+      ry="48"
+    ></ellipse>
+    <line
+      x1="128"
+      x2="128"
+      y1="152"
+      y2="200"
+      fill="none"
+      stroke="#7ED7C1"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="12"
+    ></line>
+    <path
+      fill="none"
+      stroke="#7ED7C1"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="12"
+      d="M24,104v48c0,24,40,48,104,48s104-24,104-48V104"
+    ></path>
+    <line
+      x1="192"
+      x2="192"
+      y1="142.107"
+      y2="190.107"
+      fill="none"
+      stroke="#7ED7C1"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="12"
+    ></line>
+    <line
+      x1="64"
+      x2="64"
+      y1="142.107"
+      y2="190.107"
+      fill="none"
+      stroke="#7ED7C1"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="12"
+    ></line>
+  </svg>
+`
+
+//
+
+const icons = [svg, svg1, svg2]
+
 const wrapper = document.querySelector('.wrapper')
 
 let start = new Date().getTime()
@@ -148,7 +276,7 @@ const calcDistance = (a, b) => {
 	const diffX = b.x - a.x,
 		diffY = b.y - a.y
 
-	return Math.sqrt(Math.pow(diffX, 1.8) + Math.pow(diffY, 1.8))
+	return Math.sqrt(Math.pow(diffX, 2) + Math.pow(diffY, 2))
 }
 
 const calcElapsedTime = (start, end) => end - start
@@ -160,7 +288,7 @@ const appendElement = element => wrapper.appendChild(element),
 const createStar = position => {
 	const star = document.createElement('div'),
 		color = selectRandom(config.colors)
-	star.innerHTML = svg
+	star.innerHTML = icons[Math.floor(Math.random() * 3)]
 
 	star.className = 'star fa-solid fa-sparkle'
 
