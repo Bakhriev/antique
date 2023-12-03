@@ -40,6 +40,19 @@ accordions.forEach(ac => {
 	})
 })
 
+const tableItems = document.querySelectorAll('.mobile-table__item')
+
+tableItems.forEach(item => {
+	const toggle = item.querySelector('.mobile-table__toggle')
+	const content = item.querySelector('.mobile-table__content')
+	toggle.addEventListener('click', () => {
+		item.classList.toggle('active')
+		content.style.maxHeight
+			? (content.style.maxHeight = '')
+			: (content.style.maxHeight = content.scrollHeight + 'px')
+	})
+})
+
 // Start
 const svg = `
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="coin">
@@ -98,8 +111,6 @@ const svg = `
     ></line>
   </svg>
 `
-
-
 
 const wrapper = document.querySelector('.wrapper')
 
@@ -179,21 +190,6 @@ const createGlowPoint = position => {
 const determinePointQuantity = distance =>
 	Math.max(Math.floor(distance / config.maximumGlowPointSpacing), 1)
 
-const createGlow = (last, current) => {
-	const distance = calcDistance(last, current),
-		quantity = determinePointQuantity(distance)
-
-	const dx = (current.x - last.x) / quantity,
-		dy = (current.y - last.y) / quantity
-
-	Array.from(Array(quantity)).forEach((_, index) => {
-		const x = last.x + dx * index,
-			y = last.y + dy * index
-
-		createGlowPoint({x, y})
-	})
-}
-
 const updateLastStar = position => {
 	last.starTimestamp = new Date().getTime()
 
@@ -225,8 +221,6 @@ const handleOnMove = e => {
 
 		updateLastStar(mousePosition)
 	}
-
-	createGlow(last.mousePosition, mousePosition)
 
 	updateLastMousePosition(mousePosition)
 }
