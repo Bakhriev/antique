@@ -22,6 +22,11 @@ body {
 	max-width: 1170px;
 	padding: 0 15px;
 }
+.container-fluid {
+	max-width: 1920px;
+	width: 100%;
+	margin: 0 auto;
+}
 
 // on open some modals
 .disable-scroll {
