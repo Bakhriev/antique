@@ -97,7 +97,7 @@ body {
 }
 
 .btn {
-	color: #fff;
+	color: var(--white);
 	text-align: center;
 	font-family: Oswald;
 	font-size: 16px;
@@ -105,7 +105,14 @@ body {
 
 	padding: 11px 20px;
 	border-radius: 5px;
-	background: #b78b49;
+	background-color: var(--driftwood);
+	transition: background-color 300ms;
+	@include hover {
+		background-color: var(--driftwood-200);
+	}
+	&:active {
+		scale: 0.97;
+	}
 
 	@media screen and (max-width: 375px) {
 		font-size: 14px;

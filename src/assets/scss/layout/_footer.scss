@@ -85,6 +85,10 @@
 		a {
 			text-decoration: none;
 			color: var(--black);
+			transition: color 300ms;
+			@include hover {
+				color: var(--driftwood);
+			}
 			font-family: Oswald;
 			font-size: 14px;
 			font-weight: 400;
