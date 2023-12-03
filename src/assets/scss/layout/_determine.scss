@@ -91,3 +91,35 @@
 		}
 	}
 }
+
+.determine-video {
+	position: relative;
+	max-width: 630px;
+	width: 100%;
+	height: 350px;
+	border-radius: 5px;
+	background:
+		url(<path-to-image>),
+		lightgray 0px 0px / 100.901% 100.318% no-repeat;
+	box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+	overflow: hidden;
+	video {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	&__play {
+		z-index: 2;
+		position: absolute;
+		@include center;
+		&.active {
+			.determine-video__icon {
+				display: none;
+			}
+		}
+	}
+	&__icon {
+		width: 98px;
+		height: 98px;
+	}
+}

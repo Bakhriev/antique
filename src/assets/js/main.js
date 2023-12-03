@@ -59,6 +59,34 @@ const fileInputRes = document.querySelector('.custom-file__name')
 fileInput.addEventListener('input', e => {
 	fileInputRes.textContent = e.target.files[0].name
 })
+const video = document.querySelector('.determine-video video')
+const videoPlay = document.querySelector('.determine-video__play')
+
+let isPlaying = false
+
+const playVideo = async () => {
+	if (!isPlaying) {
+		try {
+			await video.play()
+			isPlaying = true
+			videoPlay.classList.add('active')
+		} catch {
+			console.log('Ошибка при start')
+		}
+	} else {
+		try {
+			await video.pause()
+			isPlaying = false
+			videoPlay.classList.remove('active')
+		} catch {
+			console.log('Ошибка при stop')
+		}
+	}
+}
+
+video.addEventListener('play', playVideo)
+video.addEventListener('pause', playVideo)
+videoPlay.addEventListener('click', playVideo)
 
 //
 
