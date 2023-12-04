@@ -304,7 +304,7 @@ const calcDistance = (a, b) => {
 	const diffX = b.x - a.x,
 		diffY = b.y - a.y
 
-	return Math.sqrt(Math.pow(diffX, 2) + Math.pow(diffY, 2))
+	return Math.sqrt(Math.pow(diffX, 1) + Math.pow(diffY, 1))
 }
 
 const calcElapsedTime = (start, end) => end - start
