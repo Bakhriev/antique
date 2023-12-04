@@ -19,6 +19,9 @@
 		}
 	}
 }
+.feedback-cards:hover {
+	animation-play-state: paused;
+}
 
 .feedback-cards {
 	display: flex;
