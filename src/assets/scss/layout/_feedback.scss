@@ -41,6 +41,11 @@
 .feedback-card {
 	width: 556px;
 	padding: 25px;
+	@media screen and (max-width: 768px) {
+		width: 290px;
+		padding: 15px;
+		padding-bottom: 0;
+	}
 	padding-top: 0;
 	border-radius: 5px;
 	background: #fff;
@@ -53,12 +58,18 @@
 		display: grid;
 		place-items: center;
 		transform: translateY(-25px);
+		@media screen and (max-width: 768px) {
+			transform: translateY(-40px);
+		}
 	}
 
 	&__user {
 	}
 
 	&__body {
+		@media screen and (max-width: 768px) {
+			transform: translateY(-25px);
+		}
 	}
 
 	&__title {

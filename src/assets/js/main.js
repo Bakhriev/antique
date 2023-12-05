@@ -27,6 +27,20 @@ const burgerMenu = () => {
 }
 burgerMenu()
 
+const saleBlock = document.querySelector('.sale-blocks')
+const forSales = [...saleBlock.querySelectorAll('.for-sale')]
+const saleBtn = document.querySelector('.buying__btn')
+
+// Сколько элементов в начале будут видны, остальное будет скрыто
+const visibleCount = 10
+if (window.innerWidth <= 500) {
+	forSales.slice(visibleCount).forEach(elem => elem.classList.add('hide'))
+}
+
+saleBtn.addEventListener('click', () => {
+	forSales.slice(visibleCount).forEach(elem => elem.classList.toggle('hide'))
+})
+
 const accordions = document.querySelectorAll('.accordion')
 
 accordions.forEach(ac => {

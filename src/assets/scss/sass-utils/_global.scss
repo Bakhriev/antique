@@ -134,15 +134,50 @@ body {
 	align-items: center;
 	justify-content: center;
 	gap: 20px;
-	@media screen and (max-width: 992px) {
-		gap: 5px;
+	@media screen and (max-width: 600px) {
+		gap: 10px;
+	}
+	&.mobile-flowers {
+		@media screen and (max-width: 600px) {
+			.flower-wrapper__title {
+				text-align: left;
+			}
+			justify-content: flex-start;
+		}
+
+		.flower-wrapper__icon {
+			@media screen and (max-width: 600px) {
+				width: 23px;
+				height: 54px;
+				background-size: 23px 54px;
+			}
+			@media screen and (max-width: 600px) {
+				&:last-child {
+					display: none;
+				}
+				&:first-child {
+					background-image: url('../img/svg/flower-vert-r.svg');
+				}
+			}
+		}
 	}
 	&__icon {
+		flex-shrink: 0;
 		width: 100px;
 		height: 42px;
-		@media screen and (max-width: 500px) {
+		background-position: center center;
+		background-size: 100px 42px;
+		background-repeat: no-repeat;
+		&:first-child {
+			background-image: url('../img/svg/flower-hor-l.svg');
+		}
+		&:last-child {
+			background-image: url('../img/svg/flower-hor-r.svg');
+		}
+		@media screen and (max-width: 600px) {
 			width: 54px;
 			height: 23px;
+			background-size: 54px 23px;
 		}
 	}
 
@@ -154,10 +189,10 @@ body {
 		font-weight: 400;
 		line-height: 1.1;
 
-		@media screen and (max-width: 992px) {
-			font-size: 34px;
+		@media screen and (max-width: 768px) {
+			font-size: 32px;
 		}
-		@media screen and (max-width: 500px) {
+		@media screen and (max-width: 600px) {
 			font-size: 20px;
 		}
 
@@ -165,4 +200,8 @@ body {
 			font-weight: 600;
 		}
 	}
+}
+
+.hide {
+	display: none !important;
 }
