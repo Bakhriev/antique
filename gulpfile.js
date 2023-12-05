@@ -94,7 +94,7 @@ function cssMinify() {
 }
 
 function jsMinify() {
-	return src(path.src.js).pipe(uglify()).pipe(dest(path.build.js))
+	return src(path.src.js).pipe(dest(path.build.js))
 }
 
 function imgMinify() {
@@ -163,13 +163,6 @@ function video() {
 	return src(path.src.video).pipe(dest(path.build.video))
 }
 
-function webpImg() {
-	return src(srcPath + 'assets/img/**/*.{jpeg,jpg,png}')
-		.pipe(webp())
-		.pipe(dest(distPath + 'assets/img/webp'))
-		.pipe(browserSync.reload({stream: true}))
-}
-
 // function svg() {
 // 	return src(path.src.svg)
 // 		.pipe(dest(path.build.svg))
@@ -223,7 +216,7 @@ function prod(done) {
 
 const dev = series(
 	clean,
-	parallel(html, css, js, img, video, webpImg, svg, vendors, fonts),
+	parallel(html, css, js, img, video, svg, vendors, fonts),
 	serve
 )
 const build = series(
@@ -235,7 +228,6 @@ const build = series(
 		jsMinify,
 		imgMinify,
 		video,
-		webpImg,
 		svg,
 		vendors,
 		fonts
@@ -252,7 +244,7 @@ function watchFiles() {
 	watch([srcPath + 'assets/js/**/*.js'], js)
 	watch([path.src.img], img)
 	watch([path.src.video], video)
-	watch([path.src.img], webp)
+
 	watch([path.src.svg], svg)
 	watch([path.src.vendors], vendors)
 	watch([path.src.fonts], fonts)
@@ -265,7 +257,6 @@ exports.css = css
 exports.js = js
 exports.img = img
 exports.video = video
-exports.webpImg = webpImg
 exports.svg = svg
 exports.dev = dev
 exports.vendors = vendors

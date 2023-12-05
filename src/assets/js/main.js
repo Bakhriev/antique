@@ -74,13 +74,14 @@ fileInput.addEventListener('input', e => {
 })
 const video = document.querySelector('.determine-video video')
 const videoPlay = document.querySelector('.determine-video__play')
-
 let isPlaying = false
-
+video.controls = false
 const playVideo = async () => {
 	if (!isPlaying) {
 		try {
 			await video.play()
+			video.controls = true
+
 			isPlaying = true
 			videoPlay.classList.add('active')
 		} catch {
@@ -90,6 +91,7 @@ const playVideo = async () => {
 		try {
 			await video.pause()
 			isPlaying = false
+			video.controls = false
 			videoPlay.classList.remove('active')
 		} catch {
 			console.log('Ошибка при stop')
