@@ -27,6 +27,7 @@ const burgerMenu = () => {
 }
 burgerMenu()
 
+// --------- View More Btn Start ---------
 const saleBlock = document.querySelector('.sale-blocks')
 const forSales = [...saleBlock.querySelectorAll('.for-sale')]
 const saleBtn = document.querySelector('.buying__btn')
@@ -39,7 +40,9 @@ if (window.innerWidth <= 500) {
 saleBtn.addEventListener('click', () => {
 	forSales.slice(visibleCount).forEach(elem => elem.classList.toggle('hide'))
 })
+// --------- View More Btn Start ---------
 
+// --------- Accordions Start ---------
 const accordions = document.querySelectorAll('.accordion')
 
 accordions.forEach(ac => {
@@ -53,6 +56,9 @@ accordions.forEach(ac => {
 	})
 })
 
+// --------- Accordions End ---------
+
+// --------- Tabs Start ---------
 const tableItems = document.querySelectorAll('.mobile-table__item')
 
 tableItems.forEach(item => {
@@ -65,13 +71,19 @@ tableItems.forEach(item => {
 			: (content.style.maxHeight = content.scrollHeight + 'px')
 	})
 })
+// --------- Tabs End ---------
 
+// --------- Form File Input Selected Name Start ---------
 const fileInput = document.querySelector('.custom-file__input')
 const fileInputRes = document.querySelector('.custom-file__name')
 
 fileInput.addEventListener('input', e => {
 	fileInputRes.textContent = e.target.files[0].name
 })
+
+// --------- Form File Input Selected Name End ---------
+
+// --------- Video Start ---------
 const video = document.querySelector('.determine-video video')
 const videoPlay = document.querySelector('.determine-video__play')
 let isPlaying = false
@@ -102,10 +114,9 @@ const playVideo = async () => {
 video.addEventListener('play', playVideo)
 video.addEventListener('pause', playVideo)
 videoPlay.addEventListener('click', playVideo)
+// --------- Video End ---------
 
-//
-
-// Coins Anim
+// --------- Coins Anim Start ---------
 const svg = `
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="coin">
     <rect width="24" height="24" fill="none"></rect>
@@ -279,8 +290,6 @@ const svg2 = `
   </svg>
 `
 
-//
-
 const icons = [svg, svg1, svg2]
 
 const wrapper = document.querySelector('.wrapper')
@@ -401,3 +410,5 @@ window.onmousemove = e => handleOnMove(e)
 window.ontouchmove = e => handleOnMove(e.touches[0])
 
 wrapper.onmouseleave = () => updateLastMousePosition(originPosition)
+
+// --------- Coins Anim End ---------
