@@ -23,7 +23,7 @@
 		lightgray -83.625px -407px / 113.194% 163.302%;
 	background-position: bottom;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: 1940px 100%;
 
 	&__flower {
 		margin-bottom: 40px;
@@ -85,7 +85,7 @@
 		overflow: hidden;
 		transition: max-height 300ms linear;
 		padding: 0 30px;
-		background: #d8d6d6;
+		background: #8c755e;
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
@@ -99,7 +99,7 @@
 			padding-bottom: 15px;
 		}
 
-		color: var(--black);
+		color: var(--white);
 		font-family: Oswald;
 		font-size: 16px;
 		font-weight: 400;
