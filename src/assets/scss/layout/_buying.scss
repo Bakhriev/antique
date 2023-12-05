@@ -70,7 +70,11 @@
 	font-size: 14px;
 	font-weight: 600;
 	line-height: 1.3;
-	&_active {
+	transition:
+		background-color 300ms,
+		color 300ms;
+	@include hover {
+		cursor: default;
 		background-color: #8c755e;
 		color: var(--white);
 	}
