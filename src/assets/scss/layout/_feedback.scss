@@ -14,8 +14,8 @@
 	}
 	&__flower {
 		margin-bottom: 65px;
-		@media screen and (max-width: 500px) {
-			margin-bottom: 45px;
+		@media screen and (max-width: 768px) {
+			margin-bottom: 0px;
 		}
 	}
 }
@@ -28,6 +28,15 @@
 	gap: 20px;
 	height: 100%;
 	animation-name: infiniteScroll;
+	@media screen and (max-width: 768px) {
+		padding-top: 50px;
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-bottom: 10px;
+		animation: none;
+		overflow-x: scroll;
+		width: 100%;
+	}
 	animation-duration: 20s;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
@@ -42,7 +51,7 @@
 	width: 556px;
 	padding: 25px;
 	@media screen and (max-width: 768px) {
-		width: 290px;
+		min-width: 290px;
 		padding: 15px;
 		padding-bottom: 0;
 	}

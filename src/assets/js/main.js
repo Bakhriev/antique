@@ -30,7 +30,6 @@ burgerMenu()
 const saleBlock = document.querySelector('.sale-blocks')
 const forSales = [...saleBlock.querySelectorAll('.for-sale')]
 const saleBtn = document.querySelector('.buying__btn')
-
 // Сколько элементов в начале будут видны, остальное будет скрыто
 const visibleCount = 10
 if (window.innerWidth <= 500) {
